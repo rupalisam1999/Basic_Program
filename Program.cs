@@ -9,23 +9,28 @@ namespace Basic_Program
           static void Main(string[] args)
         {
 
-            Console.Write("Enter the value of N: ");
-            //VARIABLES
-            int N = Convert.ToInt32(Console.ReadLine());
-            int i = 1;
-            float nthHarmonicValue = 0;
-
-            while (i <= N)
+            Console.Write("Enter a character to check wheather it is Vowel or Consonant : ");
+            char character = Convert.ToChar(Console.ReadLine().ToUpper());
+            switch (character)
             {
-                Console.Write($"1/{i} + ");
-                nthHarmonicValue += 1 / (float)i;
-                i++;
+                case 'A':
+                case 'E':
+                case 'I':
+                case 'O':
+                case 'U':
+                    Console.WriteLine("Entered character is a Vowel");
+                    break;
+                default:
+                    Console.WriteLine("Entered character is a Consonant");
+                    break;
             }
-            Console.WriteLine($"\n{nthHarmonicValue}");
         }
-
     }
-
 }
+        
+
+    
+
+
 
 
