@@ -8,17 +8,24 @@ namespace Basic_Program
       
           static void Main(string[] args)
         {
-            Console.WriteLine("Please Enter the year in four digits :- ");
-            int year = Convert.ToInt32(Console.ReadLine());
-            if (year % 4 == 0 || year % 400 == 0)
+
             {
-                Console.WriteLine("year is leap year");
+                int power_2;
+                Console.WriteLine("Please enter value of n to print power of 2 table");
+                int n = Convert.ToInt32(Console.ReadLine());
+                if (n >= 0 && n <= 30)
+                {
+                    for (int i = 0; i <= n; i++)
+                    {
+                        power_2 = Convert.ToInt32(Math.Pow(2, i));
+                        Console.WriteLine("2^" + i + " : " + power_2);
+                    }
+                }
+                else
+                    Console.WriteLine("Please Enter value of n from 0 to 30");
             }
-            else
-            {
-                Console.WriteLine("year is not leap year");
-            }
-            Console.ReadLine();
         }
     }
 }
+    
+
