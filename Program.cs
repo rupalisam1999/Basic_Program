@@ -4,17 +4,19 @@ namespace Basic_Program
 {
       class Program
     {
-        static void Main(string[] args)
+       
+      
+          static void Main(string[] args)
         {
-            Console.WriteLine("Please enter any number :- ");
-            int Num = Convert.ToInt32(Console.ReadLine());
-            if (Num % 2 == 0)
+            Console.WriteLine("Please Enter the year in four digits :- ");
+            int year = Convert.ToInt32(Console.ReadLine());
+            if (year % 4 == 0 || year % 400 == 0)
             {
-                Console.WriteLine("Enter number is even");
+                Console.WriteLine("year is leap year");
             }
             else
             {
-                Console.WriteLine("Enter number is odd");
+                Console.WriteLine("year is not leap year");
             }
             Console.ReadLine();
         }
